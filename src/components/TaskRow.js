@@ -25,7 +25,7 @@ const TaskRow = (props) => {
   };
 
   return edit ? (
-    <Form opener={setEdit} id={props.task.id} task={props.task} submit={handleSubmit} />
+    <Form opener={setEdit} id={props.task === undefined ? 1 : props.task.id} task={props.task} submit={handleSubmit} />
   ) : (
     <div className="d-flex justify-content-between">
       <div className="d-flex ">
